@@ -8,25 +8,25 @@ export const UpdateItem = () => {
     const navigate = useNavigate();
     const [items, dispatch] = useContext(ItemContext);
 
-    const [code, setCode] = useState("");    // Track the code entered by the user
-    const [name, setName] = useState("");    // Track name input
-    const [price, setPrice] = useState<number>(0);  // Track price input
-    const [quantity, setQuantity] = useState<number>(0);  // Track quantity input
+    const [code, setCode] = useState("");
+    const [name, setName] = useState("");
+    const [price, setPrice] = useState<number>(0);
+    const [quantity, setQuantity] = useState<number>(0);
 
-    // Auto-fill fields when the code is entered
+
     useEffect(() => {
         if (code) {
             const itemToUpdate = items.find((item: Item) => item.code === code);
             if (itemToUpdate) {
-                // Populate fields with existing item data
+
                 setName(itemToUpdate.name);
                 setPrice(itemToUpdate.price);
                 setQuantity(itemToUpdate.quantity);
             }
         }
-    }, [code, items]); // Re-run the effect when `code` or `items` changes
+    }, [code, items]);
 
-    // Handle form submission
+
     function handleSubmit() {
         const updatedItem = new Item(code, name, price, quantity);
         dispatch({ type: 'UPDATE_ITEM', payload: updatedItem });
