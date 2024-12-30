@@ -16,7 +16,7 @@ export function Dashboard() {
             <div className="mb-8">
                 <h2 className="text-xl font-semibold mb-4">Customers</h2>
                 <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden table-auto">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-sky-500">
                     <tr>
                         <th className="py-2 px-4 border-b">Name</th>
                         <th className="py-2 px-4 border-b">Address</th>
@@ -42,7 +42,7 @@ export function Dashboard() {
             <div>
                 <h2 className="text-xl font-semibold mb-4">Items</h2>
                 <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-sky-500">
                     <tr>
                         <th className="py-2 px-4 border-b">Code</th>
                         <th className="py-2 px-4 border-b">Name</th>
