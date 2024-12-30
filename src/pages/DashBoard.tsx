@@ -15,7 +15,7 @@ export function Dashboard() {
             {/* Customer Table */}
             <div className="mb-8">
                 <h2 className="text-xl font-semibold mb-4">Customers</h2>
-                <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden table-auto">
                     <thead className="bg-gray-100">
                     <tr>
                         <th className="py-2 px-4 border-b">Name</th>
@@ -27,15 +27,16 @@ export function Dashboard() {
                     <tbody>
                     {customers.map((customer: Customer) => (
                         <tr key={customer.email} className="hover:bg-gray-50">
-                            <td className="py-2 px-4 border-b">{customer.name}</td>
-                            <td className="py-2 px-4 border-b">{customer.address}</td>
-                            <td className="py-2 px-4 border-b">{customer.email}</td>
-                            <td className="py-2 px-4 border-b">{customer.phone}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{customer.name}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{customer.address}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{customer.email}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{customer.phone}</td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
             </div>
+
 
             {/* Item Table */}
             <div>
@@ -52,15 +53,16 @@ export function Dashboard() {
                     <tbody>
                     {items.map((item: Item) => (
                         <tr key={item.code} className="hover:bg-gray-50">
-                            <td className="py-2 px-4 border-b">{item.code}</td>
-                            <td className="py-2 px-4 border-b">{item.name}</td>
-                            <td className="py-2 px-4 border-b">{item.price}</td>
-                            <td className="py-2 px-4 border-b">{item.quantity}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{item.code}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{item.name}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{item.price}</td>
+                            <td className="py-2 px-4 border-b text-center align-middle">{item.quantity}</td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
             </div>
+
         </div>
     );
 }
